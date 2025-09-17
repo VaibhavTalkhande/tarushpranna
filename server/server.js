@@ -1,3 +1,4 @@
+import userRoutes from "./routes/userRoutes.js";
 import productRoutes from "./routes/productRoutes.js";
 import express from "express";
 import dotenv from "dotenv";
@@ -22,11 +23,10 @@ app.get("/", (req, res) => {
 });
 
 // // Routes (we’ll add later)
-// import userRoutes from "./routes/userRoutes.js";
 // import courseRoutes from "./routes/courseRoutes.js";
 // import orderRoutes from "./routes/orderRoutes.js";
 
-// app.use("/api/users", userRoutes);
+app.use("/api/users", userRoutes);
 app.use("/api/products", productRoutes);
 // app.use("/api/courses", courseRoutes);
 // app.use("/api/orders", orderRoutes);
